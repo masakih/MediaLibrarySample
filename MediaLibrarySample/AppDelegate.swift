@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        observerSet.library = libaray.observe(\MLMediaLibrary.mediaSources) { (lib, _) in
+        observerSet.library = libaray.observe(\MLMediaLibrary.mediaSources) { lib, _ in
             
             self.mediaSource = lib.mediaSources?[MLMediaSourceiTunesIdentifier]
         }
@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var mediaSource: MLMediaSource? {
         didSet {
             
-            observerSet.source = mediaSource?.observe(\MLMediaSource.rootMediaGroup) { (source, _) in
+            observerSet.source = mediaSource?.observe(\MLMediaSource.rootMediaGroup) { source, _ in
                 
                 self.rootMediaGroup = source.rootMediaGroup
             }
@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var rootMediaGroup: MLMediaGroup? {
         didSet {
             
-            observerSet.rootGroup = rootMediaGroup?.observe(\MLMediaGroup.mediaObjects) { (rootGroup, _) in
+            observerSet.rootGroup = rootMediaGroup?.observe(\MLMediaGroup.mediaObjects) { rootGroup, _ in
                 
                 self.mediaObjects = rootGroup.mediaObjects ?? []
             }
