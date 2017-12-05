@@ -17,10 +17,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc dynamic var mediaObjects: [MLMediaObject] = []
     
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        observerSet.library = libaray.observe(\MLMediaLibrary.mediaSources) { [weak self] (lib, _) in
+            
+            self?.mediaSource = lib.mediaSources?[MLMediaSourceiTunesIdentifier]
+        }
+        
+        libaray.load()
+    }
+    
     private let libaray = MLMediaLibrary(options: [MLMediaLoadIncludeSourcesKey: [MLMediaSourceiTunesIdentifier],
                                            MLMediaLoadSourceTypesKey: MLMediaSourceType.audio.rawValue])
-    private var mediaSource: MLMediaSource?
-    private var rootMediaGroup: MLMediaGroup?
+    private var mediaSource: MLMediaSource? {
+        didSet {
+            
+            observerSet.source = mediaSource?.observe(\MLMediaSource.rootMediaGroup) { [weak self] (source, _) in
+                
+                self?.rootMediaGroup = source.rootMediaGroup
+            }
+            
+            mediaSource?.load()
+        }
+    }
+    private var rootMediaGroup: MLMediaGroup? {
+        didSet {
+            
+            observerSet.rootGroup = rootMediaGroup?.observe(\MLMediaGroup.mediaObjects) { [weak self] (rootGroup, _) in
+                
+                self?.mediaObjects = rootGroup.mediaObjects ?? []
+            }
+            
+            rootMediaGroup?.load()
+        }
+    }
     
     private struct ObservalSet {
         var library: NSKeyValueObservation?
@@ -30,43 +60,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         init() {}
     }
     private var observerSet = ObservalSet()
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        observerSet.library = libaray.observe(\MLMediaLibrary.mediaSources) { (lib, _) in
-            
-            lib.mediaSources.map(self.setMediaSources(sources:))
-        }
-        
-        libaray.load()
-    }
-    
-    private func setMediaSources(sources: [String: MLMediaSource]) {
-        
-        mediaSource = sources[MLMediaSourceiTunesIdentifier]
-        
-        observerSet.source = mediaSource?.observe(\MLMediaSource.rootMediaGroup) { (source, _) in
-            
-            source.rootMediaGroup.map(self.setRootMediaGroup(rootGroup:))
-        }
-        
-        mediaSource?.load()
-    }
-    
-    private func setRootMediaGroup(rootGroup: MLMediaGroup) {
-        
-        rootMediaGroup = rootGroup
-        
-        observerSet.rootGroup = rootMediaGroup?.observe(\MLMediaGroup.mediaObjects) { (rootGroup, _) in
-            
-            rootGroup.mediaObjects.map(self.setMediaObjects(mediaObjects:))
-        }
-        
-        rootMediaGroup?.load()
-    }
-    
-    private func setMediaObjects(mediaObjects newObjects: [MLMediaObject]) {
-        
-        mediaObjects = newObjects
-    }
 }
