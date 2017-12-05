@@ -51,6 +51,10 @@ class MediaCellView: NSTableCellView {
         }
     }
     
+    @IBOutlet weak var artistField: NSTextField?
+    @IBOutlet weak var durationField: NSTextField?
+    @IBOutlet weak var modificationDateField: NSTextField?
+    
     @objc dynamic var duration: Any? {
         
         return self[.duration]
@@ -59,6 +63,25 @@ class MediaCellView: NSTableCellView {
     @objc dynamic var artist: String? {
         
         return self[.artist]
+    }
+    
+    override var backgroundStyle: NSView.BackgroundStyle {
+        didSet {
+            switch backgroundStyle {
+            case .dark:
+                textColor = .white
+            default:
+                textColor = .controlTextColor
+            }
+        }
+    }
+    
+    private var textColor: NSColor = .controlTextColor {
+        didSet {
+            artistField?.textColor = textColor
+            durationField?.textColor = textColor
+            modificationDateField?.textColor = textColor
+        }
     }
     
     private subscript<T>(_ key: AttributeKey) -> T? {

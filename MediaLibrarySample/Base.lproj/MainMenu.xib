@@ -688,14 +688,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="121" horizontalPageScroll="10" verticalLineScroll="121" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig4-Qu-ZPT">
+                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="122" horizontalPageScroll="10" verticalLineScroll="122" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ig4-Qu-ZPT">
                         <rect key="frame" x="-1" y="-1" width="482" height="362"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="FFX-e3-0g6">
                             <rect key="frame" x="1" y="1" width="480" height="360"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="119" rowSizeStyle="automatic" viewBased="YES" id="VoS-qK-zzx">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="120" rowSizeStyle="automatic" viewBased="YES" id="VoS-qK-zzx">
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -716,11 +716,11 @@
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="TJo-ZD-gQU" customClass="MediaCellView" customModule="MediaLibrarySample" customModuleProvider="target">
-                                                    <rect key="frame" x="1" y="1" width="477" height="119"/>
+                                                    <rect key="frame" x="1" y="1" width="477" height="120"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSP-cp-lXF">
-                                                            <rect key="frame" x="128" y="84" width="343" height="22"/>
+                                                            <rect key="frame" x="122" y="85" width="349" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="tcN-5k-ixW">
                                                                 <font key="font" metaFont="system" size="18"/>
@@ -732,7 +732,7 @@
                                                             </connections>
                                                         </textField>
                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmI-AH-QXV">
-                                                            <rect key="frame" x="3" y="3" width="121" height="113"/>
+                                                            <rect key="frame" x="3" y="4" width="113" height="113"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Muw-3f-WFQ"/>
                                                             <connections>
@@ -740,7 +740,7 @@
                                                             </connections>
                                                         </imageView>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Tb-XK-bEu">
-                                                            <rect key="frame" x="128" y="10" width="343" height="17"/>
+                                                            <rect key="frame" x="122" y="10" width="349" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="74y-ob-3dO">
                                                                 <dateFormatter key="formatter" dateStyle="short" id="m4e-EX-Mju"/>
@@ -753,7 +753,7 @@
                                                             </connections>
                                                         </textField>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEN-MG-Kww">
-                                                            <rect key="frame" x="128" y="65" width="343" height="17"/>
+                                                            <rect key="frame" x="122" y="66" width="349" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Sa1-8v-kY1">
                                                                 <font key="font" metaFont="system"/>
@@ -765,7 +765,7 @@
                                                             </connections>
                                                         </textField>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="URM-ow-H9F">
-                                                            <rect key="frame" x="128" y="29" width="160" height="17"/>
+                                                            <rect key="frame" x="122" y="30" width="160" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="848-Hh-zHL">
                                                                 <customFormatter key="formatter" id="LGn-mk-X0i" customClass="DurationFormatter" customModule="MediaLibrarySample" customModuleProvider="target"/>
@@ -779,7 +779,10 @@
                                                         </textField>
                                                     </subviews>
                                                     <connections>
+                                                        <outlet property="artistField" destination="eEN-MG-Kww" id="tyW-50-PE8"/>
+                                                        <outlet property="durationField" destination="URM-ow-H9F" id="S9A-Fo-KKy"/>
                                                         <outlet property="imageView" destination="mmI-AH-QXV" id="ZBs-ZG-RIb"/>
+                                                        <outlet property="modificationDateField" destination="6Tb-XK-bEu" id="jmR-bx-W1j"/>
                                                         <outlet property="textField" destination="RSP-cp-lXF" id="yGo-Hk-AT9"/>
                                                     </connections>
                                                 </tableCellView>
