@@ -45,8 +45,10 @@ class MediaCellView: NSTableCellView {
     
     override class func keyPathsForValuesAffectingValue(forKey key: String) -> Set<String> {
         
-        if key == "objectValue" { return [] }
-        return ["objectValue"]
+        switch key {
+        case #keyPath(objectValue): return []
+        default: return [#keyPath(objectValue)]
+        }
     }
     
     @objc dynamic var duration: Any? {
@@ -54,15 +56,15 @@ class MediaCellView: NSTableCellView {
         return self[.duration]
     }
     
-    @objc dynamic var artist: Any? {
+    @objc dynamic var artist: String? {
         
         return self[.artist]
     }
     
-    private subscript(_ key: AttributeKey) -> Any? {
+    private subscript<T>(_ key: AttributeKey) -> T? {
         
         guard let mediaObject = objectValue as? MLMediaObject else { return nil }
-        return mediaObject.attributes[key.rawValue]
+        return mediaObject.attributes[key.rawValue] as? T
     }
     
 }
