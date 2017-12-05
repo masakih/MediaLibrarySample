@@ -12,6 +12,7 @@
 		F4CB37371FD56D230086999C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB37361FD56D230086999C /* AppDelegate.swift */; };
 		F4CB37391FD56D230086999C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CB37381FD56D230086999C /* Assets.xcassets */; };
 		F4CB373C1FD56D230086999C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4CB373A1FD56D230086999C /* MainMenu.xib */; };
+		F4D6E7361FD6D98400DF5626 /* MediaLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6E7351FD6D98400DF5626 /* MediaLibraryExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		F4CB37431FD56D230086999C /* MediaLibrarySampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaLibrarySampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB374E1FD56D230086999C /* MediaLibrarySampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaLibrarySampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB37611FD56D4D0086999C /* MediaLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaLibrary.framework; path = System/Library/Frameworks/MediaLibrary.framework; sourceTree = SDKROOT; };
+		F4D6E7351FD6D98400DF5626 /* MediaLibraryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F4CB37361FD56D230086999C /* AppDelegate.swift */,
+				F4D6E7351FD6D98400DF5626 /* MediaLibraryExtension.swift */,
 				F443962A1FD585B3001C250F /* MediaCellView.swift */,
 				F443962C1FD58BA1001C250F /* DurationFormatter.swift */,
 				F4CB37381FD56D230086999C /* Assets.xcassets */,
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D6E7361FD6D98400DF5626 /* MediaLibraryExtension.swift in Sources */,
 				F4CB37371FD56D230086999C /* AppDelegate.swift in Sources */,
 				F443962D1FD58BA1001C250F /* DurationFormatter.swift in Sources */,
 				F443962B1FD585B3001C250F /* MediaCellView.swift in Sources */,

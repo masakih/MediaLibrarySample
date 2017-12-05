@@ -12,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MediaLibraryTest" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MediaLibrarySample" customModuleProvider="target">
             <connections>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -693,7 +693,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="FFX-e3-0g6">
                             <rect key="frame" x="1" y="1" width="480" height="360"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="119" rowSizeStyle="automatic" viewBased="YES" id="VoS-qK-zzx">
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
@@ -715,7 +715,7 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
-                                                <tableCellView id="TJo-ZD-gQU" customClass="MediaCellView" customModule="MediaLibraryTest" customModuleProvider="target">
+                                                <tableCellView id="TJo-ZD-gQU" customClass="MediaCellView" customModule="MediaLibrarySample" customModuleProvider="target">
                                                     <rect key="frame" x="1" y="1" width="477" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
@@ -768,7 +768,7 @@
                                                             <rect key="frame" x="128" y="29" width="160" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="848-Hh-zHL">
-                                                                <customFormatter key="formatter" id="LGn-mk-X0i" customClass="DurationFormatter" customModule="MediaLibraryTest" customModuleProvider="target"/>
+                                                                <customFormatter key="formatter" id="LGn-mk-X0i" customClass="DurationFormatter" customModule="MediaLibrarySample" customModuleProvider="target"/>
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
